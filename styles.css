@@ -442,12 +442,17 @@ p {
 }
 
 .hero-med-bg-img {
-  height: 100svh;
+  background-image: url(assets/model3citybg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top 103px;
   height: 100vh;
-  padding-top: 79px;
-  display: block;
-  margin-left: -590px;
-  /* margin: auto; */
+}
+
+@media (max-width: 890px) {
+  .hero-med-bg-img {
+    background-position: center top 79px;
+  }
 }
 
 @media (max-height: 430px) {
@@ -689,6 +694,16 @@ p {
   font-weight: var(--fw-semibold-600);
   line-height: 1;
   color: var(--clr-bg-red);
+}
+
+@media (max-width: 890px) {
+  .stat-title {
+    font-size: var(--fs-24);
+  }
+
+  .stat-value {
+    font-size: var(--fs-48);
+  }
 }
 
 table {
@@ -1012,4 +1027,10 @@ footer {
   width: 20px;
   margin-left: 0.5rem;
   fill: var(--clr-white);
+}
+
+@media (max-width: 890px) {
+  .mobile-text {
+    font-size: var(--fs-20);
+  }
 }
