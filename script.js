@@ -155,23 +155,18 @@ let prevScrollPos = window.pageYOffset;
 window.onscroll = function () {
   const currentScrollPos = window.pageYOffset;
   const navbar = document.querySelector('.navbar');
-  const navbarWithDrop = document.querySelector('.navbar-w-drop');
-//   const mobileNav = document.querySelector('.mobile-nav');
 
   if (prevScrollPos > currentScrollPos) {
     // User is scrolling up
     navbar.style.opacity = '1';
-    navbarWithDrop.style.opacity = '1';
-    // mobileNav.style.opacity = '1';
   } else {
     // User is scrolling down
     navbar.style.opacity = '0'; // Adjust opacity as needed
-    navbarWithDrop.style.opacity = '0'; // Adjust opacity as needed
-    // mobileNav.style.opacity = '0';
   }
 
   prevScrollPos = currentScrollPos;
 };
+
 
 
 // Select all mobile navigation links using a common class

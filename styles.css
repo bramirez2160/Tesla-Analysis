@@ -277,13 +277,13 @@ p {
   display: none;
 }
 
-@media (min-width: 891px) {
+@media (min-width: 1291px) {
   .mobile-nav {
     display: none;
   }
 }
 
-@media (max-width: 890px) {
+@media (max-width: 1290px) {
   .mobile-nav {
     display: flex;
   }
@@ -304,14 +304,15 @@ p {
     left: 0;
     width: 100%;
     height: 0;
-    background-color: rgba(249, 249, 248, 0.6);
+    background-color: rgba(249, 249, 248, 0.8);
     backdrop-filter: blur(10px);
     transition: opacity 0.3s ease-in-out;
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 1.5rem;
+    justify-content: flex-start;
+
+    gap: 1rem;
     transition: 0.3s ease;
     overflow: hidden;
   }
@@ -319,7 +320,7 @@ p {
   .mobile-nav-links a {
     text-decoration: none;
     color: var(--clr-black);
-    font-size: var(--fs-28);
+    font-size: var(--fs-20);
   }
 
   .hamburger-menu {
@@ -344,8 +345,9 @@ p {
   }
 
   #check:checked ~ .mobile-nav-links {
-    height: 60svh;
-    height: 60vh;
+    height: 100svh;
+    height: 100vh;
+    padding-top: 1.5rem;
   }
 }
 
@@ -365,7 +367,13 @@ p {
   letter-spacing: -4.8px;
   max-width: 50vw;
   padding-left: 3vw;
-  padding-right: 1vw;
+  padding-right: 3vw;
+}
+
+@media (max-width: 1366px) {
+  .hero-copy h1 {
+    font-size: var(--fs-68);
+  }
 }
 
 .hero-image {
@@ -449,15 +457,21 @@ p {
   height: 100vh;
 }
 
-@media (max-width: 890px) {
+@media (max-width: 1290px) {
   .hero-med-bg-img {
     background-position: center top 79px;
   }
 }
 
-@media (max-height: 430px) {
+@media (orientation: portrait) {
   .hero-med-bg-img {
-    margin-left: 0;
+    background-image: url(assets/model3citybg_portrait.jpg);
+  }
+}
+
+@media (orientation: landscape) {
+  .hero-med-bg-img {
+    background-image: url(assets/model3citybg_landscape.jpg);
   }
 }
 
@@ -470,7 +484,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 70vh 2rem 0 2rem;
+  padding: 75vh 2rem 0 2rem;
 }
 
 @media (min-width: 1118px) {
@@ -488,9 +502,10 @@ p {
   margin-bottom: 1rem;
 }
 
-@media (max-width: 430px) {
+@media (max-width: 1290px) {
   .overlay-text h1 {
     font-size: var(--fs-24);
+    margin-bottom: 0.25rem;
   }
 }
 
@@ -621,6 +636,16 @@ p {
   color: var(--clr-light-grey);
 }
 
+@media (max-width: 430px) {
+  .dt-title {
+    font-size: var(--fs-24);
+  }
+
+  .dt-desc {
+    font-size: var(--fs-16);
+  }
+}
+
 .other-factors {
   background-color: #111111;
 }
@@ -654,6 +679,16 @@ p {
   font-size: var(--fs-20);
   font-weight: var(--fw-regular-400);
   color: var(--clr-light-p-red);
+}
+
+@media (max-width: 430px) {
+  .factor {
+    font-size: var(--fs-20);
+  }
+
+  .factor-desc {
+    font-size: var(--fs-16);
+  }
 }
 
 .summary {
@@ -849,7 +884,7 @@ td {
   color: var(--clr-dark-p-red);
 }
 
-@media (max-width: 430px) {
+@media (max-width: 1290px) {
   .vehicle-title-tesla,
   .vehicle-miles-tesla,
   .vehicle-title,
@@ -957,6 +992,12 @@ td {
   letter-spacing: 2.5;
 }
 
+@media (max-width: 1290px) {
+  .disclaimer p {
+    font-size: var(--fs-20);
+  }
+}
+
 footer {
   background-color: var(--clr-bg-red);
 }
@@ -1003,6 +1044,12 @@ footer {
   font-weight: var(--fw-regular-400);
 }
 
+@media (max-width: 1290px) {
+  .footer-links-wrapper a {
+    font-size: var(--fs-16);
+  }
+}
+
 .footer-wrapper .nav-referral {
   background-color: none;
   border-radius: 5px;
@@ -1017,6 +1064,12 @@ footer {
   padding-bottom: 1rem;
 }
 
+@media (max-width: 1290px) {
+  .footer-copyright {
+    font-size: 12px;
+  }
+}
+
 .foot-ref-link-wrapper {
   display: flex;
   align-items: center;
@@ -1029,7 +1082,7 @@ footer {
   fill: var(--clr-white);
 }
 
-@media (max-width: 890px) {
+@media (max-width: 1290px) {
   .mobile-text {
     font-size: var(--fs-20);
   }
