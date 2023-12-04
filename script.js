@@ -6,7 +6,7 @@ function startCountingAnimation() {
 
     function animateValue(element, start, end, duration, decimalPlaces = 0, prefix = "", suffix = "") {
         let startTime = null;
-        const fps = 10000; // Increase the frames per second (you can adjust this value)
+        const fps = 10000;
 
         function step(currentTime) {
             if (!startTime) {
@@ -16,15 +16,13 @@ function startCountingAnimation() {
             const progress = (currentTime - startTime) / duration;
             if (progress <= 1) {
                 let value;
-                if (element.classList.contains("decimal-stat")) {
-                    // Display random numbers for elements with .decimal-stat class
+                if (element.classList.contains("decimal-stat")) {                    
                     const randomValue = (Math.random() * (3.97 - 2.44) + 2.44).toFixed(decimalPlaces);
                     value = parseFloat(randomValue).toFixed(decimalPlaces);
-                } else if (element.classList.contains("autopilot-stat")) {
-                    // Display random numbers for elements with .autopilot-stat class
+                } else if (element.classList.contains("autopilot-stat")) {                  
                     const randomValue = (Math.random() * (57 - 48) + 48).toFixed(0);
                     value = parseFloat(randomValue).toFixed(0);
-                    suffix = "%"; // Add the % sign for autopilot-stat
+                    suffix = "%";
                 } else {
                     value = start + progress * (end - start);
                 }
@@ -34,7 +32,6 @@ function startCountingAnimation() {
                     maximumFractionDigits: decimalPlaces,
                 })}${suffix}`;
 
-                // Request the next animation frame at a higher FPS for smoother transition
                 setTimeout(() => {
                     requestAnimationFrame(step);
                 }, 1000 / fps);
@@ -46,7 +43,6 @@ function startCountingAnimation() {
             }
         }
 
-        // Start the animation
         requestAnimationFrame(step);
     }
 
@@ -62,7 +58,6 @@ function startCountingAnimation() {
         }
     });
 
-    // Additional code for autopilot-stat
     autopilotValueDisplays.forEach((valueDisplay) => {
         const startValue = 0;
         const endValue = parseFloat(valueDisplay.getAttribute("data-val"));
@@ -85,27 +80,23 @@ observer.observe(section);
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Function to handle the intersection observer callback
 function handleIntersection(entries, observer) {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const milesBar = entry.target;
         const dataWidth = parseFloat(milesBar.getAttribute("data-width"));
         milesBar.style.width = dataWidth + "%";
-        observer.unobserve(milesBar); // Stop observing once animated
+        observer.unobserve(milesBar);
       }
     });
   }
   
-  // Create an Intersection Observer
   const observer = new IntersectionObserver(handleIntersection, {
-    threshold: 0.1, // You can adjust the threshold as needed
+    threshold: 0.1,
   });
   
-  // Get all elements with the class "miles-bar"
   const milesBars = document.querySelectorAll(".miles-bar");
   
-  // Observe each "miles-bar" element
   milesBars.forEach((milesBar) => {
     observer.observe(milesBar);
   });
@@ -113,39 +104,32 @@ function handleIntersection(entries, observer) {
 
   });
 
-// Add click event listeners to all questions
 const questions = document.querySelectorAll('.question');
 
 questions.forEach(question => {
     question.addEventListener('click', () => {
-        const answer = question.nextElementSibling; // Get the next sibling element (answer)
+        const answer = question.nextElementSibling;
 
-        // Toggle the 'open' class to show/hide the answer and rotate the arrow
         answer.classList.toggle('open');
     });
 });
 
-// Select the faq-arrow elements
 const faqArrows = document.querySelectorAll('.faq-arrow');
 
 faqArrows.forEach(faqArrow => {
   faqArrow.addEventListener('click', () => {
-    // Find the parent faq-question-wrapper
     const questionWrapper = faqArrow.parentElement;
 
-    // Toggle the open class on the parent faq-question-wrapper
     questionWrapper.classList.toggle('open');
 
-    // Find the faq-answer element
     const answer = questionWrapper.nextElementSibling;
 
-    // Toggle the answer's display
     if (answer.style.display === 'block') {
       answer.style.display = 'none';
-      faqArrow.style.transform = 'rotate(0deg)'; // Reset the arrow rotation
+      faqArrow.style.transform = 'rotate(0deg)';
     } else {
       answer.style.display = 'block';
-      faqArrow.style.transform = 'rotate(180deg)'; // Rotate the arrow 180 degrees
+      faqArrow.style.transform = 'rotate(180deg)';
     }
   });
 });
@@ -157,11 +141,9 @@ window.onscroll = function () {
   const navbar = document.querySelector('.navbar');
 
   if (prevScrollPos > currentScrollPos) {
-    // User is scrolling up
     navbar.style.opacity = '1';
   } else {
-    // User is scrolling down
-    navbar.style.opacity = '0'; // Adjust opacity as needed
+    navbar.style.opacity = '0';
   }
 
   prevScrollPos = currentScrollPos;
@@ -169,13 +151,10 @@ window.onscroll = function () {
 
 
 
-// Select all mobile navigation links using a common class
 const mobileNavLinks = document.querySelectorAll('#click-close');
 
-// Attach a click event listener to each link
 mobileNavLinks.forEach(link => {
   link.addEventListener('click', () => {
-    // Uncheck the checkbox to close the mobile menu
     const checkbox = document.getElementById('check');
     checkbox.checked = false;
   });
