@@ -802,6 +802,10 @@ td {
   margin-block: 2rem;
 }
 
+.faq-question-wrapper .faq-answer p {
+  color: var(--clr-gray-200);
+}
+
 .faq-answer {
   display: none;
 }
