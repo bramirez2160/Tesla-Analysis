@@ -20,7 +20,7 @@ function startCountingAnimation() {
                     const randomValue = (Math.random() * (3.97 - 2.44) + 2.44).toFixed(decimalPlaces);
                     value = parseFloat(randomValue).toFixed(decimalPlaces);
                 } else if (element.classList.contains("autopilot-stat")) {                  
-                    const randomValue = (Math.random() * (57 - 48) + 48).toFixed(0);
+                    const randomValue = (Math.random() * (48 - 38) + 38).toFixed(0);
                     value = parseFloat(randomValue).toFixed(0);
                     suffix = "%";
                 } else {
