@@ -28,6 +28,7 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <header>
@@ -91,7 +92,7 @@
       </nav>
     </header>
     <section class="hero" id="hero">
-      <div class="hero-copy">
+      <div class="hero-copy" data-aos="fade-right" data-aos-easings="ease" data-aos-duration="1000">
         <h1>
           Exploring the Real-World Practical Efficiency of a Tesla Model 3 RWD
         </h1>
@@ -134,12 +135,12 @@
           </div>
         </div>
       </div>
-      <div class="hero-image"></div>
+      <div class="hero-image" data-aos="fade-left" data-aos-easings="ease" data-aos-duration="1000"></div>
     </section>
     <section class="hero-med" id="hero-med">
       <div class="hero-med-content-wrapper">
         <div class="hero-med-bg-img"></div>
-        <div class="overlay-text">
+        <div class="overlay-text" data-aos="fade-down" data-aos-easings="ease" data-aos-duration="3000">
           <h1>
             Exploring the Real-World Practical Efficiency of a Tesla Model 3 RWD
           </h1>
@@ -184,7 +185,7 @@
         </div>
       </div>
     </section>
-    <section class="intro container section-spacing" id="intro">
+    <section class="intro container section-spacing" data-aos="fade-up" data-aos-easings="ease" data-aos-duration="2000" id="intro">
       <h6>Introduction</h6>
       <p class="mobile-text">
         Throughout my ownership of a 2023 Tesla Model 3 RWD, I've diligently collected an extensive dataset about the car. My goal has been to gain a comprehensive understanding of the vehicle's true efficiency and calculate the cost savings in comparison to my previous vehicle, a 2015 Volkswagen Passat 1.8T Limited Edition. I will share all the collected data and offer my personal insights, as there are several nuanced aspects to consider.
@@ -196,7 +197,7 @@
         <img src="assets/0x0-model3_20.jpg" alt="" />
       </div>
     </section>
-    <section class="data-tracked container section-spacing" id="data-tracked">
+    <section class="data-tracked container section-spacing" data-aos="fade-up" data-aos-easings="ease" data-aos-duration="2000" id="data-tracked">
       <h6>Data Tracked</h6>
       <p class="mobile-text">
         All the vehicle data used in calculations is sourced directly from the
@@ -420,7 +421,7 @@
       class="other-factors section-spacing section-padding"
       id="other-factors"
     >
-      <div class="other-factors-wrapper container">
+      <div class="other-factors-wrapper container" data-aos="fade-up" data-aos-easings="ease" data-aos-duration="2000">
         <h6>Other Factors</h6>
         <p class="margin-b-2 mobile-text">
           As noted earlier, the efficiency of a Tesla Model 3 RWD is subject to
@@ -481,7 +482,7 @@
         </p>
       </div>
     </section>
-    <section class="summary container section-spacing" id="the-numbers">
+    <section class="summary container section-spacing" data-aos="fade-up" data-aos-easings="ease" data-aos-duration="2000" id="the-numbers">
       <h6>The Numbers</h6>
       <p class="mobile-text">
         Now, let's explore the numbers. We'll start with an overview of the most
@@ -826,13 +827,13 @@
       </div>
     </section>
     <section
-      class="how-far-twenty section-spacing section-padding"
+      class="how-far-twenty section-spacing section-padding" 
       id="twenty-challenge"
     >
-      <div class="twenty-section-wrapper container">
+      <div class="twenty-section-wrapper container" data-aos="fade-up" data-aos-easings="ease" data-aos-duration="2000">
         <div class="how-far-title">How Far Will Twenty Dollars Take You?</div>
         <p class="how-far-desc margin-b-2 mobile-text">
-          Let's simplify these numbers to a relatable measure: range. How many miles can you travel in a 2023 Tesla Model 3 RWD for just $20 compared to a similarly priced vehicle in the range of $35,000 to $40,000?
+          Let's simplify these numbers to a relatable measure: cost. How many miles can you travel in a 2023 Tesla Model 3 RWD for just $20 compared to a similarly priced vehicle in the range of $35,000 to $40,000?
         </p>
         <div class="vehicle-wrapper">
           <div class="vehicle">
@@ -919,7 +920,7 @@
         </p>
       </div>
     </section>
-    <section class="faq container section-spacing" id="faq">
+    <section class="faq container section-spacing" data-aos="fade-up" data-aos-easings="ease" data-aos-duration="2000" id="faq">
       <div class="faq-heading">Frequently Asked Questions</div>
       <div class="faq-question-wrapper">
         <div class="question mobile-text">
@@ -1078,7 +1079,7 @@
         </div>
       </div>
     </section>
-    <section class="disclaimer container section-spacing" id="disclaimer">
+    <section class="disclaimer container section-spacing" data-aos="fade-up" data-aos-easings="ease" data-aos-duration="2000" id="disclaimer">
       <div class="disclaimer-heading">Disclaimer</div>
       <p class="mobile-text">
         This website is dedicated to the independent analysis of the efficiency
@@ -1118,5 +1119,10 @@
       </div>
     </footer>
     <script src="script.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
