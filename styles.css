@@ -1,6 +1,7 @@
 :root {
   --clr-white-100: #f9f9f8;
   --clr-gray-100: #f5f5f4;
+  --clr-gray-175: #6f6f6f;
   --clr-gray-200: #5a5a59;
   --clr-gray-300: #acacac;
   --clr-black-100: #333332;
@@ -10,6 +11,7 @@
   --clr-red-75: #ffacac;
   --clr-red-100: #ff8b8b;
   --clr-red-150: #ffc8c5;
+  --clr-red-175: #dd5c53;
   --clr-red-200: #d6352a;
   --clr-red-300: #c92121;
   --clr-red-400: #a02020;
@@ -324,13 +326,13 @@ p {
 .hero-sub-text {
   font-size: var(--fs-20);
   font-weight: var(--fw-regular-400);
-  color: var(--clr-red-200);
+  color: var(--clr-red-175);
 }
 
 .hero-sub-item svg {
   height: 24px;
   width: 24px;
-  fill: var(--clr-black-100);
+  fill: var(--clr-gray-175);
 }
 
 .hero-med {
